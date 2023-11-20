@@ -11,18 +11,45 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+//function titleCased
+//returns title case tutorial names
+//NO ARGUMENTS
+//iterate through tutorials array
+//ACCESS EACH INDIVIDUAL WORD
+const  titleCased = () => tutorials.map( sentence => {
+  const splitSentence = sentence.split(" ")
 
-const titleCased = () =>  tutorials.map(sentence => {
-  const splitSentences = sentence.split(' ')
-  //declare new constant
-  const wordsCaps = splitSentences.map( word => word[0].toUpperCase() + word.slice(1))
-  //map through constant
-  //grab the 1st element in array, set to uppercase
-  //slice rest off of array
-  const completedCaps = wordsCaps.join(' ')
+    console.log(splitSentence)
+    const capsCase = splitSentence.map(word =>
+    word[0].toUpperCase() + word.slice(1)
+    )
+    console.log(capsCase)
+    const completedCaps = capsCase.join(' ')
+
+    return completedCaps
+  }
+  )
+
+
+    
+titleCased()
+
+
+
+
+// const titleCased = () =>  tutorials.map(sentence => {
+//   const splitSentences = sentence.split(' ')
+//   //declare new constant
+//   const wordsCaps = splitSentences.map( word => 
+//     word[0].toUpperCase() + word.slice(1)
+//     )
+//   //map through constant
+//   //grab the 1st element in array, set to uppercase
+//   //slice rest off of array
+//   const completedCaps = wordsCaps.join(' ')
   
-  return completedCaps
-})
+//   return completedCaps
+// })
 
 //console.log(titleCased)
 
